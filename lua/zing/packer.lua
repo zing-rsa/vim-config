@@ -25,6 +25,8 @@ return require('packer').startup(function(use)
 
   use('mg979/vim-visual-multi')
 
+  use('theprimeagen/harpoon')
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
