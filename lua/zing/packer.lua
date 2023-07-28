@@ -27,6 +27,8 @@ return require('packer').startup(function(use)
 
   use('theprimeagen/harpoon')
 
+  use('aiken-lang/editor-integration-nvim')
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
