@@ -29,6 +29,12 @@ return require('packer').startup(function(use)
 
   use('aiken-lang/editor-integration-nvim')
 
+  use('junegunn/goyo.vim')
+
+  use{'akinsho/toggleterm.nvim', tag = '*', config = function()
+      require('toggleterm').setup()
+  end}
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
