@@ -24,7 +24,7 @@ vim.keymap.set("n", "<leader>p",  "\"+p")
 vim.keymap.set("n", "<Enter>", "o<ESC>");
 
 -- toggle goyo
-vim.keymap.set("n", "<C-z>", ":Goyo");
+vim.keymap.set("n", "<C-z>", ":Goyo 120x100%<CR>");
 
 -- jump to next line with same indent
 vim.keymap.set("n", "<M-k>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*\\)')  .'\\%<' . line('.') . 'l\\S', 'be')<CR>", { silent = true });
