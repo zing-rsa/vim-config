@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
       require('toggleterm').setup()
   end}
 
+  use('tpope/vim-surround')
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',

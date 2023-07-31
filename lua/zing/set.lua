@@ -23,3 +23,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.hidden = true
 
 vim.opt.splitright = true
+vim.opt.clipboard = 'unnamedplus'
