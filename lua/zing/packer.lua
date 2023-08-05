@@ -31,11 +31,9 @@ return require('packer').startup(function(use)
 
   use('junegunn/goyo.vim')
 
-  use{'akinsho/toggleterm.nvim', tag = '*', config = function()
-      require('toggleterm').setup()
-  end}
-
   use('tpope/vim-surround')
+
+  use("folke/zen-mode.nvim")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

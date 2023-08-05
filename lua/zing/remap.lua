@@ -5,6 +5,12 @@ vim.g.mapleader = " "
 -- NORMAL MODE
 ------------------
 
+-- override for tmux-sessionizer
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- override for tmux-homenizer
+vim.keymap.set("n", "<C-h>", "<cmd>silent !tmux neww tmux-homenizer<CR>")
+
 -- open project view
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
