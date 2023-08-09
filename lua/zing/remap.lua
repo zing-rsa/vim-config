@@ -39,18 +39,25 @@ vim.keymap.set("n", "<M-j>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*
 -- join(removes CR at end of line)
 vim.keymap.set("n", "<C-x>", "J")
 
--- jump half page
-vim.keymap.set("n", "<C-j>", "<C-d>")
-vim.keymap.set("n", "<C-k>", "<C-u>")
+-- jump 20 lines 
+vim.keymap.set("n", "<C-j>", "20jzz")
+vim.keymap.set("n", "<C-k>", "20kzz")
 
+-- center screen after half jump
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 ------------------
 -- VISUAL MODE
 ------------------
 
--- jump half page
-vim.keymap.set("v", "<C-j>", "<C-d>")
-vim.keymap.set("v", "<C-k>", "<C-u>")
+-- jump 20 lines
+vim.keymap.set("v", "<C-j>", "20jzz")
+vim.keymap.set("v", "<C-k>", "20kzz")
+
+-- jump half page 
+vim.keymap.set("v", "<C-d>", "<C-d>zz")
+vim.keymap.set("v", "<C-u>", "<C-u>zz")
 
 -- join in visual mode 
 vim.keymap.set("v", "<C-x>", "J")
@@ -61,4 +68,5 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
 
 -- windows paste in visual mode
 vim.keymap.set("v", "<leader>y",  "\"+y")
+
 
