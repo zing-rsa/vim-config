@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
 
   use("folke/zen-mode.nvim")
 
+  use {"chrisgrieser/nvim-spider"}
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',

@@ -5,6 +5,12 @@ vim.g.mapleader = " "
 -- NORMAL MODE
 ------------------
 
+-- remap esc
+vim.keymap.set("n", "<ESC>", "<cmd> silent :noh<CR><ESC>")
+
+-- prevent overwrite clip when pasting in view
+vim.keymap.set("x", "p", "\"_dP")
+
 -- override for tmux-sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
@@ -34,7 +40,7 @@ vim.keymap.set("n", "<C-z>", ":Goyo 120x100%<CR>");
 
 -- jump to next line with same indent
 vim.keymap.set("n", "<M-k>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*\\)')  .'\\%<' . line('.') . 'l\\S', 'be')<CR>", { silent = true });
-vim.keymap.set("n", "<M-j>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*\\)')  .'\\%>' . line('.') . 'l\\S', 'e')<CR>", { silent = true }); 
+vim.keymap.set("n", "<M-j>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*\\)')  .'\\%>' . line('.') . 'l\\S', 'e')<CR>", { silent = true });
 
 -- join(removes CR at end of line)
 vim.keymap.set("n", "<C-x>", "J")
@@ -47,6 +53,9 @@ vim.keymap.set("n", "<C-k>", "20kzz")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- center searches
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 ------------------
 -- VISUAL MODE
 ------------------
