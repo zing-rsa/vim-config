@@ -35,19 +35,12 @@ vim.keymap.set("n", "<leader>p",  "\"+p")
 -- add newline in nornmal mode
 vim.keymap.set("n", "<Enter>", "o<ESC>");
 
--- toggle goyo
-vim.keymap.set("n", "<C-z>", ":Goyo 120x100%<CR>");
-
 -- jump to next line with same indent
 vim.keymap.set("n", "<M-k>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*\\)')  .'\\%<' . line('.') . 'l\\S', 'be')<CR>", { silent = true });
 vim.keymap.set("n", "<M-j>", ":call search('^'. matchstr(getline('.'), '\\(^\\s*\\)')  .'\\%>' . line('.') . 'l\\S', 'e')<CR>", { silent = true });
 
 -- join(removes CR at end of line)
 vim.keymap.set("n", "<C-x>", "J")
-
--- jump 20 lines 
-vim.keymap.set("n", "<C-j>", "20jzz")
-vim.keymap.set("n", "<C-k>", "20kzz")
 
 -- center screen after half jump
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -60,11 +53,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- VISUAL MODE
 ------------------
 
--- jump 20 lines
-vim.keymap.set("v", "<C-j>", "20jzz")
-vim.keymap.set("v", "<C-k>", "20kzz")
-
--- jump half page 
+-- center screen after half jump
 vim.keymap.set("v", "<C-d>", "<C-d>zz")
 vim.keymap.set("v", "<C-u>", "<C-u>zz")
 

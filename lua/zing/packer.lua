@@ -29,8 +29,6 @@ return require('packer').startup(function(use)
 
   use('aiken-lang/editor-integration-nvim')
 
-  use('junegunn/goyo.vim')
-
   use('tpope/vim-surround')
 
   use("folke/zen-mode.nvim")
